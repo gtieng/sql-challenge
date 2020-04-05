@@ -40,7 +40,7 @@ CREATE TABLE employees (
 With the data for this project conveniently made available as `.csv` files to import into our database, we'll move ahead to the demonstrating SQL query structures.
 
 ### 1. Basic Selection
-In SQL, query statements are comprised of a combination of clauses with the most basic type making use of `SELECT` to choose columns to display and `FROM` to identify from the data source. The use of `*` denotes selecting all data.
+In SQL, query statements are comprised of a combination of clauses with the most basic type making use of `SELECT` to choose columns to display and `FROM` to identify the data source. The use of `*` denotes selecting all data.
 
 ```
 select *
@@ -49,6 +49,20 @@ from employees
 ![](https://github.com/gtieng/sql-challenge/blob/master/readme_images/1_basic.png)
 ```
 Successfully run. Total query runtime: 317 msec.
+300024 rows affected.
+```
+### 2. Querying with Joins
+Selecting data from two or more sources requires the use of the `JOIN` clause in conjunction with `FROM` and must also specify the common key from each table using `ON`. Here, instead of querying all data, we will choose select columns from each data source.
+
+```
+SELECT e.emp_no, e.last_name, e.first_name, e.gender, s.salary
+FROM employees as e
+JOIN salaries as s
+ON e.emp_no = s.emp_no;
+```
+![](https://github.com/gtieng/sql-challenge/blob/master/readme_images/2_joins.png)
+```
+Successfully run. Total query runtime: 588 msec.
 300024 rows affected.
 ```
 
