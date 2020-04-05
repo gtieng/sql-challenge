@@ -43,10 +43,10 @@ With the data for this project conveniently made available as `.csv` files to im
 In SQL, query statements are comprised of a combination of clauses with the most basic type making use of `SELECT` to choose columns to display and `FROM` to identify from the data source. The use of `*` denotes selecting all data.
 
 ```
-select 8
+select *
 from employees
 ```
-~[](https://github.com/gtieng/sql-challenge/blob/master/readme_images/1_basic.png)
+![](https://github.com/gtieng/sql-challenge/blob/master/readme_images/1_basic.png)
 ```
 Successfully run. Total query runtime: 317 msec.
 300024 rows affected.
