@@ -46,7 +46,7 @@ In SQL, query statements are comprised of a combination of clauses with the most
 select 8
 from employees
 ```
-~[]()
+~[](https://github.com/gtieng/sql-challenge/blob/master/readme_images/1_basic.png)
 ```
 Successfully run. Total query runtime: 317 msec.
 300024 rows affected.
