@@ -1,7 +1,7 @@
 # Exploring Multiple Tables of Employee Information with SQL
-For reasons including access restrictions, space limitations, and more, information within a database may not always lie within one source. A main benefit of using SQL databases to store information is the speed and ease of this method to join multiple tables and retrieve specific slices of information.
+For reasons including access restrictions, space limitations, and more, information within a database may not always lie within one source. A main benefit of using SQL databases to store information is the speed and ease of this method to join multiple tables and query slices of information.
 
-In this project, we will load multiple tables of employee data from a fictional company into a SQL database and demonstrate a few different ways in which SQL can be used to pull custom selections of data. The following is the list of tables and their corresponding column titles:
+In this project, we will load multiple tables of employee data from a fictional company into a SQL database and demonstrate a few different ways in which SQL can be used to query data. The following is the list of tables and their corresponding column titles:
 
  - Departments (department id, department name)
  - Department_Emp (employee id, department id, from date, to date)
@@ -37,6 +37,20 @@ CREATE TABLE employees (
 ```
 
 ## Data Exploration
+With the data for this project conveniently made available as `.csv` files to import into our database, we'll move ahead to the demonstrating SQL query structures.
+
+### 1. Basic Selection
+In SQL, query statements are comprised of a combination of clauses with the most basic type making use of `SELECT` to choose columns to display and `FROM` to identify from the data source. The use of `*` denotes selecting all data.
+
+```
+select 8
+from employees
+```
+~[]()
+```
+Successfully run. Total query runtime: 317 msec.
+300024 rows affected.
+```
 
 
 
