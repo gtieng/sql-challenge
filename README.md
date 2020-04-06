@@ -52,7 +52,7 @@ Successfully run. Total query runtime: 317 msec.
 300024 rows affected.
 ```
 ### 2. Querying with Joins
-Selecting data from two or more sources requires the use of the `JOIN` clause in conjunction with `FROM` and must also specify the common key from each table using `ON`. Here, instead of querying all data, we will choose select columns from each data source.
+Selecting data from two sources requires the use of the `JOIN` clause in conjunction with `FROM` and must also specify the common key from each table using `ON`. Here, instead of querying all data, we will choose select columns from each data source.
 
 ```
 SELECT e.emp_no, e.last_name, e.first_name, e.gender, s.salary
@@ -64,6 +64,34 @@ ON e.emp_no = s.emp_no;
 ```
 Successfully run. Total query runtime: 588 msec.
 300024 rows affected.
+```
+
+### Filtering Data with WHERE
+When queried data needs to filtered to specific criteria, the `WHERE` clause is used to isolate the relevant information. In this example, both datetime format and logical operators are recogized by SQL to select all records from 1986.
+
+```
+SELECT emp_no, first_name, last_name
+FROM employees
+WHERE hire_date between '1986-01-01' AND '1986-12-31';
+```
+![](https://github.com/gtieng/sql-challenge/blob/master/readme_images/3_where.png)
+```
+Successfully run. Total query runtime: 161 msec.
+52245 rows affected.
+```
+
+### Querying String Patterns
+In cases where queries require a looser definition of data to pull, SQL can also make use of Regular Expression to parse strings and return similar results. The use of `LIKE 'B%'` in the following example will return all employees named "Hercules" with last name starting with "B".
+
+```
+SELECT *
+FROM employees
+WHERE first_name = 'Hercules' AND last_name LIKE 'B%';
+```
+![](https://github.com/gtieng/sql-challenge/blob/master/readme_images/4_meta.png)
+```
+Successfully run. Total query runtime: 161 msec.
+52245 rows affected.
 ```
 
 
